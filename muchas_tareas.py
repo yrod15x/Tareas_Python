@@ -96,6 +96,11 @@ def eleccion():
         nombres_numerologicos()
     elif seleccion == '4':
         cifra_cesar()
+    elif seleccion == '5':
+        cuenta_palabras()
+
+def cuenta_palabras():
+    pass
 
 menu()
 eleccion()
