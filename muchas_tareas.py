@@ -77,22 +77,26 @@ def cifra_cesar():
 
     print()
 
+def menu():
+    print("*** TAREAS VARIAS ***")
+    print()
+    print("1. Convertir Notas - Numeros a Letras")
+    print("2. Acronimo")
+    print("3. Nombres Numerologicos")
+    print("4. Cifra Cesar")
+    print()
 
+def eleccion():
+    seleccion = input("Escriba el numero de su seleccion: ")
+    if seleccion == '1':
+        numeros_notas()
+    elif seleccion == '2':
+        acronimo()
+    elif seleccion == '3':
+        nombres_numerologicos()
+    elif seleccion == '4':
+        cifra_cesar()
 
-print("*** TAREAS VARIAS ***")
-print()
-print("1. Convertir Notas - Numeros a Letras")
-print("2. Acronimo")
-print("3. Nombres Numerologicos")
-print("4. Cifra Cesar")
-print()
+menu()
+eleccion()
 
-seleccion = input("Escriba el numero de su seleccion: ")
-if seleccion == '1':
-    numeros_notas()
-elif seleccion == '2':
-    acronimo()
-elif seleccion == '3':
-    nombres_numerologicos()
-elif seleccion == '4':
-    cifra_cesar()
