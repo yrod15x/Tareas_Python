@@ -84,6 +84,7 @@ def menu():
     print("2. Acronimo")
     print("3. Nombres Numerologicos")
     print("4. Cifra Cesar")
+    print("5. Cuenta palabras")
     print()
 
 def eleccion():
@@ -100,7 +101,10 @@ def eleccion():
         cuenta_palabras()
 
 def cuenta_palabras():
-    pass
+    #cuenta el numero de palabras de una oracion
+
+    frase = input("Ingrese una oracion: ").split(" ")
+    print(f"Su oracion tiene {len(frase)} palabras!")
 
 menu()
 eleccion()
