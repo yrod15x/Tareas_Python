@@ -84,7 +84,8 @@ def menu():
     print("2. Acronimo")
     print("3. Nombres Numerologicos")
     print("4. Cifra Cesar")
-    print("5. Cuenta palabras")
+    print("5. Cuenta Palabras")
+    print("6. Promedio Tamano Palabraas")
     print()
 
 def eleccion():
@@ -99,12 +100,25 @@ def eleccion():
         cifra_cesar()
     elif seleccion == '5':
         cuenta_palabras()
+    elif seleccion == '6':
+        promedio_largo_palabra()
 
 def cuenta_palabras():
     #cuenta el numero de palabras de una oracion
 
     frase = input("Ingrese una oracion: ").split(" ")
     print(f"Su oracion tiene {len(frase)} palabras!")
+
+def promedio_largo_palabra():
+    #Devuleve el promedio del tamano de las palabras en una oracion
+
+    frase = input("Escriba una frase: ").split(" ")
+    suma = 0
+
+    for palabra in frase:
+        suma += len(palabra)
+
+    print(f"El promedio del tamano por palabras de su frase es {suma / len(frase)}")
 
 menu()
 eleccion()
