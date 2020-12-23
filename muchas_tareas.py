@@ -120,6 +120,10 @@ def promedio_largo_palabra():
 
     print(f"El promedio del tamano por palabras de su frase es {suma / len(frase)}")
 
+def cuantas_vocales():
+    #Imprime cuantas vocales hay en una frase
+    pass
+
 menu()
 eleccion()
 
