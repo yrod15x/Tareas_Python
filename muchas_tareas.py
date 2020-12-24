@@ -85,7 +85,8 @@ def menu():
     print("3. Nombres Numerologicos")
     print("4. Cifra Cesar")
     print("5. Cuenta Palabras")
-    print("6. Promedio Tamano Palabraas")
+    print("6. Promedio Tamano Palabras")
+    print("7. Numero Vocales")
     print()
 
 def eleccion():
@@ -102,6 +103,8 @@ def eleccion():
         cuenta_palabras()
     elif seleccion == '6':
         promedio_largo_palabra()
+    elif seleccion == '7':
+        cuantas_vocales()
 
 def cuenta_palabras():
     #cuenta el numero de palabras de una oracion
@@ -122,7 +125,35 @@ def promedio_largo_palabra():
 
 def cuantas_vocales():
     #Imprime cuantas vocales hay en una frase
-    pass
+    
+    vocales = [0, 0, 0, 0, 0]
+    frase = input("Escriba una frase: ")
+    frase = frase.lower()
+
+    for letra in frase:
+        if letra == 'a':
+            vocales[0] += 1
+        elif letra == 'e':
+            vocales[1] += 1
+        elif letra == 'i':
+            vocales[2] += 1
+        elif letra == 'o':
+            vocales[3] += 1
+        elif letra == 'u':
+            vocales[4] += 1
+
+    for vocal in range(len(vocales)):
+        if vocal == 0:
+            print(f"Hay {vocales[vocal]} vocales a.")
+        elif vocal == 1:
+            print(f"Hay {vocales[vocal]} vocales e.")
+        elif vocal == 2:
+            print(f"Hay {vocales[vocal]} vocales i.")
+        elif vocal == 3:
+            print(f"Hay {vocales[vocal]} vocales o.")
+        elif vocal == 4:
+            print(f"Hay {vocales[vocal]} vocales u.")
+
 
 menu()
 eleccion()
